@@ -1,0 +1,14 @@
+{%extends 'myapp/base.html'%}
+
+{%block content%}
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <form method="post" class="form-group">
+                {%csrf_token%}
+                {{form.as_p}}
+                <button type="submit" class="btn btn-primary float-right">Update</button>
+            </form>
+        </div>
+    </div>
+{%endblock content%}
